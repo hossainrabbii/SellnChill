@@ -1,0 +1,133 @@
+<div class="py-16 bg-[#F7F8F7]" id="testimonials">
+  <div class="container mx-auto px-2 md:px-0">
+    <div>
+      <div
+        class="mx-auto bg-[#00574E1A] max-w-[200px] flex gap-2 justify-center p-2 rounded-full mb-4"
+      >
+        <!-- <img src="powerful.svg" /> -->
+        <p class="text-[#00574E] text-[14px] font-semibold">⭐ Customer Stories</p>
+      </div>
+      <div class="text-center">
+        <h2 class="text-[30px] md:text-[48px] w-full lg:w-1/2 mx-auto font-semibold gradi_text">
+          Trusted by industry leaders
+        </h2>
+
+        <p class="text-[#47857E] text-[18px] mt-4">
+          See how teams like yours are achieving measurable results with SellnChill.
+        </p>
+      </div>
+    </div>
+    <section
+      class="rounded-[32px] p-10 md:p-14"
+      (mouseenter)="stopAutoSlide()"
+      (mouseleave)="startAutoSlide()"
+    >
+      <div class="max-w-4xl mx-auto px-4">
+        <!-- Card -->
+        <div class="bg-white rounded-[32px] p-6 md:p-8 lg:p-12 shadow-sm">
+          <!-- Quote + Stars -->
+          <div class="flex items-center gap-3 mb-6">
+            <!-- Quote icon -->
+            <!-- <svg class="w-10 h-10 text-[#cfe3dd]" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M7.17 6A5.17 5.17 0 002 11.17V18h6v-6H5.17A1.17 1.17 0 016.34 10.83 2.83 2.83 0 019.17 8V6H7.17zM17.17 6A5.17 5.17 0 0012 11.17V18h6v-6h-2.83A1.17 1.17 0 0116.34 10.83 2.83 2.83 0 0119.17 8V6h-2z"
+              />
+            </svg> -->
+            <img src="testimonial.svg" alt="" />
+
+            <!-- Stars -->
+            <div class="flex gap-1 transition-opacity duration-500 ease-in-out -ml-10 mt-2">
+              <ng-container *ngFor="let star of [].constructor(testimonials[activeIndex].rating)">
+                <svg class="w-5 h-5 text-[#43b581]" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.97a1 1 0 00.95.69h4.174c.969 0 1.371 1.24.588 1.81l-3.376 2.454a1 1 0 00-.364 1.118l1.287 3.971c.3.921-.755 1.688-1.54 1.118l-3.377-2.454a1 1 0 00-1.176 0l-3.376 2.454c-.785.57-1.84-.197-1.54-1.118l1.287-3.971a1 1 0 00-.364-1.118L2.05 9.397c-.783-.57-.38-1.81.588-1.81h4.174a1 1 0 00.95-.69l1.287-3.97z"
+                  />
+                </svg>
+              </ng-container>
+            </div>
+          </div>
+
+          <!-- Quote -->
+          <p class="text-xl md:text-2xl text-[#0c4a40] leading-relaxed mb-10">
+            "{{ testimonials[activeIndex].quote }}"
+          </p>
+
+          <!-- Author -->
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-full bg-gradient-to-br from-[#0c6b57] to-[#4bbf9b] flex items-center justify-center text-white font-semibold"
+            >
+              {{ testimonials[activeIndex].name.charAt(0) }}
+            </div>
+
+            <div>
+              <p class="font-semibold text-[#0c4a40]">
+                {{ testimonials[activeIndex].name }}
+              </p>
+              <p class="text-sm text-[#4b7d73]">
+                {{ testimonials[activeIndex].role }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls -->
+        <div class="flex items-center justify-between mt-8">
+          <!-- Dots -->
+          <div class="flex gap-2">
+            <span
+              *ngFor="let t of testimonials; let i = index"
+              (click)="goTo(i)"
+              class="h-2.5 rounded-full cursor-pointer transition-all duration-300"
+              [class.w-5]="activeIndex === i"
+              [class.w-2.5]="activeIndex !== i"
+              [class.bg-[#0c6b57]]="activeIndex === i"
+              [class.bg-[#cfe3dd]]="activeIndex !== i"
+            ></span>
+          </div>
+
+          <!-- Arrows -->
+          <div class="flex gap-3">
+            <button
+              (click)="prev()"
+              class="w-10 h-10 rounded-full border border-[#cfe3dd] flex items-center justify-center hover:bg-[#eaf5f1] transition"
+            >
+              <img src="t-arr-l.svg" />
+            </button>
+            <button
+              (click)="next()"
+              class="w-10 h-10 rounded-full border border-[#cfe3dd] flex items-center justify-center hover:bg-[#eaf5f1] transition"
+            >
+              <img src="t-arr-r.svg" />
+            </button>
+          </div>
+        </div>
+
+        <hr class="my-12" />
+        <div class="text-center text-[#47857E]">
+          <p class="text-[14px] mb-6">Powering inventory for innovative companies</p>
+          <div class="flex flex-wrap justify-evenly">
+            <span class="text-[18px] md:text-[20px] font-semibold mx-4 md:mx-8 mb-4"
+              >TechStyle</span
+            >
+            <span class="text-[18px] md:text-[20px] font-semibold mx-4 md:mx-8 mb-4"
+              >GreenLeaf</span
+            >
+            <span class="text-[18px] md:text-[20px] font-semibold mx-4 md:mx-8 mb-4"
+              >Urban Home</span
+            >
+            <span class="text-[18px] md:text-[20px] font-semibold mx-4 md:mx-8 mb-4"
+              >Peak Outdoor</span
+            >
+            <span class="text-[18px] md:text-[20px] font-semibold mx-4 md:mx-8 mb-4"
+              >SwiftLogistics</span
+            >
+            <span class="text-[18px] md:text-[20px] font-semibold mx-4 md:mx-8 mb-4"
+              >CoreRetail</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

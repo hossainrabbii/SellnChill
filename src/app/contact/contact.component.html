@@ -1,0 +1,109 @@
+<div class="contact py-16" id="contact">
+  <div class="container mx-auto px-2 md:px-0">
+    <div class="flex items-center gap-6 flex-col md:flex-row justify-between">
+      <div class="w-full md:w-1/2">
+        <div class="bg-[#00574E1A] max-w-[200px] flex gap-2 justify-center p-2 rounded-full mb-4">
+          <img src="message.svg" />
+          <p class="text-[#00574E] text-[14px] font-semibold">Get in Touch</p>
+        </div>
+        <div>
+          <h2 class="text-[30px] md:text-[48px] font-semibold gradi_text font-semibold">
+            Ready to transform your inventory?
+          </h2>
+
+          <p class="text-[#47857E] text-[18px] mt-4">
+            Our team is here to help. Whether you need a demo, have questions, or want to discuss
+            your specific requirements—we'd love to hear from you.
+          </p>
+        </div>
+        <p class="flex gap-2 mt-4">
+          <img src="message.svg" />
+          <span>hello@sellnchill.app</span>
+        </p>
+        <p class="flex gap-2 mt-2">
+          <svg
+            class="w-4 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+          </svg>
+          <span>+1 (555) 123-4567</span>
+        </p>
+      </div>
+      <div class="w-full md:w-1/2 lg:w-[40%]">
+        <section class="contact_form">
+          <div class="max-w-3xl mx-auto px-4">
+            <div class="bg-white rounded-3xl p-4 md:p-6 lg:p-8 shadow-sm">
+              <!-- Name & Email -->
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label class="block mb-2 font-medium text-[#245b52]">Name</label>
+                  <input
+                    type="text"
+                    placeholder="John Smith"
+                    class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4bbf9b]"
+                    (input)="onChange('name', $event)"
+                  />
+                </div>
+
+                <div>
+                  <label class="block mb-2 font-medium text-[#245b52]">Email</label>
+                  <input
+                    type="email"
+                    placeholder="john@company.com"
+                    class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4bbf9b]"
+                    (input)="onChange('email', $event)"
+                  />
+                </div>
+              </div>
+
+              <!-- Company -->
+              <div class="mb-6">
+                <label class="block mb-2 font-medium text-[#245b52]">Company</label>
+                <input
+                  type="text"
+                  placeholder="Acme Inc."
+                  class="w-full rounded-xl border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[#4bbf9b]"
+                  (input)="onChange('company', $event)"
+                />
+              </div>
+
+              <!-- Message -->
+              <div class="mb-8">
+                <label class="block mb-2 font-medium text-[#245b52]">Message</label>
+                <textarea
+                  rows="4"
+                  placeholder="Tell us about your inventory challenges..."
+                  class="w-full rounded-xl border border-gray-200 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-[#4bbf9b]"
+                  (input)="onChange('message', $event)"
+                ></textarea>
+              </div>
+
+              <!-- Button -->
+              <button
+                (click)="onSubmit()"
+                class="group w-full flex items-center justify-center gap-2 rounded-xl py-4 text-white font-medium bg-gradient-to-r from-[#0c6b57] to-[#4bbf9b] hover:opacity-90 transition"
+              >
+                <!-- Send Icon -->
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" />
+                </svg>
+
+                Send Message
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

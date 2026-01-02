@@ -1,0 +1,54 @@
+<!-- Overlay -->
+<div class="fixed inset-0 bg-black/40 flex items-center justify-center z-50" (click)="closeModal()">
+  <!-- Modal -->
+  <div
+    class="bg-white w-[90%] max-w-md rounded-xl p-6 relative animate-scaleIn"
+    (click)="$event.stopPropagation()"
+  >
+    <!-- Close -->
+    <button
+      class="absolute right-4 top-4 text-[#065f46] hover:text-gray-600"
+      (click)="closeModal()"
+    >
+      ✕
+    </button>
+    <h2 class="text-2xl font-semibold text-[#065f46]">Welcome back</h2>
+    <p class="text-md mb-8 text-[#065f46]">Sign in to your SellnChill account to continue.</p>
+
+    <form (ngSubmit)="submit()" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium mb-1 text-[#065f46]">Email</label>
+        <input
+          type="email"
+          [(ngModel)]="email"
+          name="email"
+          placeholder="you@company.com"
+          required
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium mb-1 text-[#065f46]">Password</label>
+        <input
+          type="password"
+          [(ngModel)]="password"
+          name="password"
+          placeholder="*******"
+          required
+          class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+        />
+      </div>
+
+      <button
+        type="submit"
+        class="group w-full flex items-center justify-center gap-2 rounded-xl py-2 text-white font-medium bg-gradient-to-r from-[#0c6b57] to-[#4bbf9b] hover:opacity-90 transition"
+      >
+        Sign In
+      </button>
+    </form>
+    <p class="mt-2 text-center text-[#065f46]">
+      Don't have an account? <a href="" class="hover:underline"> Start free trial </a>
+    </p>
+  </div>
+</div>

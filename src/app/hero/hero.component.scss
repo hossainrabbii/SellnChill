@@ -1,0 +1,26 @@
+.hero {
+  background: #005b56;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 91, 86, 1) 55%,
+    rgba(11, 122, 117, 1) 78%,
+    rgba(247, 248, 247, 1) 98%
+  );
+}
+.btn,
+.green_g_btn {
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: 1px solid #ffffff6e;
+}
+
+.green_g_btn {
+  background: #00574e;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 87, 78, 1) 20%,
+    rgba(36, 143, 107, 1) 55%,
+    rgba(84, 192, 139, 1) 100%
+  );
+}

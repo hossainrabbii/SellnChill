@@ -1,0 +1,65 @@
+<div class="integrations py-16" id="integrations">
+  <div class="container mx-auto px-2 md:px-0">
+    <div>
+      <div
+        class="mx-auto bg-[#00574E1A] max-w-[200px] flex gap-2 justify-center p-2 rounded-full mb-4"
+      >
+        <!-- <img src="powerful.svg" /> -->
+        <p class="text-[#00574E] text-[14px] font-semibold">🔗 Seamless Integrations</p>
+      </div>
+      <div class="text-center">
+        <h2 class="text-[30px] md:text-[48px] w-full lg:w-1/2 mx-auto gradi_text font-semibold">
+          Connect to your entire ecosystem
+        </h2>
+
+        <p class="text-[#47857E] text-[18px] mt-4">
+          One-click integrations with 200+ tools. Real-time sync keeps everything in harmony— from
+          your storefront to your accounting software.
+        </p>
+      </div>
+    </div>
+
+    <!-- brands -->
+
+    <div class="marquee-wrapper">
+      <!-- Fade gradients -->
+      <div class="fade left"></div>
+      <div class="fade right"></div>
+
+      <!-- ROW 1 → RIGHT -->
+      <div class="marquee row-right">
+        <div class="track">
+          <div class="brand" *ngFor="let brand of duplicatedBrands">
+            <div class="icon">
+              {{ brand.letter }}
+            </div>
+            <div>
+              <p class="title">{{ brand.name }}</p>
+              <p class="subtitle">{{ brand.category }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 → LEFT -->
+      <div class="marquee row-left">
+        <div class="track">
+          <div class="brand" *ngFor="let brand of duplicatedBrands">
+            <div class="icon">
+              {{ brand.letter }}
+            </div>
+            <div>
+              <p class="title">{{ brand.name }}</p>
+              <p class="subtitle">{{ brand.category }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <p class="text-[#47857E]">Don't see your tool? We support custom integrations via API.</p>
+      <a href="">View all integrations →</a>
+    </div>
+  </div>
+</div>
