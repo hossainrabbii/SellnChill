@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeroComponent } from './hero/hero.component';
-import { FeatureComponent } from './features/features.component';
+import { FeaturesComponent } from './features/features.component';
 import { IntegrationsComponent } from './integrations/integrations.component';
 import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';
@@ -16,7 +16,7 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     NavbarComponent,
     HeroComponent,
-    FeatureComponent,
+    FeaturesComponent,
     IntegrationsComponent,
     EventsComponent,
     ContactComponent,
