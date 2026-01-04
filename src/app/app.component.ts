@@ -8,14 +8,12 @@ import { EventsComponent } from './events/events.component';
 import { ContactComponent } from './contact/contact.component';
 import { TestimonialComponent } from './testimonial/testimonial.component';
 import { FooterComponent } from './footer/footer.component';
-import { PreloaderComponent } from './components/preloader/preloader.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     CommonModule,
-    PreloaderComponent,
     NavbarComponent,
     HeroComponent,
     FeatureComponent,
@@ -27,13 +25,4 @@ import { PreloaderComponent } from './components/preloader/preloader.component';
   ],
   templateUrl: './app.component.html',
 })
-export class AppComponent {
-  loading = true;
-
-  constructor() {
-    // Hide preloader after first render
-    requestAnimationFrame(() => {
-      this.loading = false;
-    });
-  }
-}
+export class AppComponent {}

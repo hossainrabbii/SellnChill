@@ -1,27 +1,33 @@
 <div class="integrations py-16" id="integrations">
-  <div class="container mx-auto px-2 md:px-0">
+  <div class="container mx-auto px-6 md:px-0">
+
+    <!-- Header -->
     <div>
       <div
-        class="mx-auto bg-[#00574E1A] max-w-[200px] flex gap-2 justify-center p-2 rounded-full mb-4"
+        class="mx-auto mb-4 flex max-w-[200px] items-center justify-center gap-2 rounded-full bg-[#00574E1A] p-2"
       >
-        <!-- <img src="powerful.svg" /> -->
-        <p class="text-[#00574E] text-[14px] font-semibold">🔗 Seamless Integrations</p>
+        <p class="text-[14px] font-semibold text-[#00574E]">
+          🔗 Seamless Integrations
+        </p>
       </div>
+
       <div class="text-center">
-        <h2 class="text-[30px] md:text-[48px] w-full lg:w-1/2 mx-auto gradi_text font-semibold">
+        <h2
+          class="mx-auto w-full text-[30px] font-semibold md:text-[48px] lg:w-1/2 gradi_text"
+        >
           Connect to your entire ecosystem
         </h2>
 
-        <p class="text-[#47857E] text-[18px] mt-4">
-          One-click integrations with 200+ tools. Real-time sync keeps everything in harmony— from
+        <p class="mt-4 text-[18px] text-[#47857E]">
+          One-click integrations with 200+ tools. Real-time sync keeps everything in harmony—from
           your storefront to your accounting software.
         </p>
       </div>
     </div>
 
-    <!-- brands -->
-
+    <!-- Brands marquee -->
     <div class="marquee-wrapper">
+
       <!-- Fade gradients -->
       <div class="fade left"></div>
       <div class="fade right"></div>
@@ -29,13 +35,23 @@
       <!-- ROW 1 → RIGHT -->
       <div class="marquee row-right">
         <div class="track">
-          <div class="brand" *ngFor="let brand of duplicatedBrands">
-            <div class="icon">
+          <div
+            *ngFor="let brand of duplicatedBrands"
+            class="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-[10px]"
+          >
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(84,192,139,0.2)] font-bold text-[#065f46]"
+            >
               {{ brand.letter }}
             </div>
+
             <div>
-              <p class="title">{{ brand.name }}</p>
-              <p class="subtitle">{{ brand.category }}</p>
+              <p class="font-semibold">
+                {{ brand.name }}
+              </p>
+              <p class="text-[12px] text-gray-500">
+                {{ brand.category }}
+              </p>
             </div>
           </div>
         </div>
@@ -44,22 +60,39 @@
       <!-- ROW 2 → LEFT -->
       <div class="marquee row-left">
         <div class="track">
-          <div class="brand" *ngFor="let brand of duplicatedBrands">
-            <div class="icon">
+          <div
+            *ngFor="let brand of duplicatedBrands"
+            class="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-[10px]"
+          >
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-lg bg-[rgba(84,192,139,0.2)] font-bold text-[#065f46]"
+            >
               {{ brand.letter }}
             </div>
+
             <div>
-              <p class="title">{{ brand.name }}</p>
-              <p class="subtitle">{{ brand.category }}</p>
+              <p class="font-semibold">
+                {{ brand.name }}
+              </p>
+              <p class="text-[12px] text-gray-500">
+                {{ brand.category }}
+              </p>
             </div>
           </div>
         </div>
       </div>
+
     </div>
 
-    <div class="text-center mt-8">
-      <p class="text-[#47857E]">Don't see your tool? We support custom integrations via API.</p>
-      <a href="">View all integrations →</a>
+    <!-- Footer -->
+    <div class="mt-8 text-center">
+      <p class="text-[#47857E]">
+        Don't see your tool? We support custom integrations via API.
+      </p>
+      <a href="" class="font-medium text-[#00574E] hover:underline">
+        View all integrations →
+      </a>
     </div>
+
   </div>
 </div>

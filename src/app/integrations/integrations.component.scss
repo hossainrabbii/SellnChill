@@ -1,16 +1,18 @@
 .integrations {
-  background: #00574e00;
-  background: radial-gradient(circle, rgba(0, 87, 78, 0.2) 0%, rgba(84, 192, 139, 0.05) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 87, 78, 0.2) 0%,
+    rgba(84, 192, 139, 0.05) 100%
+  );
 }
 
 .marquee-wrapper {
   position: relative;
   overflow: hidden;
   padding: 2rem 0;
-  background-color: transparent;
 }
 
-/* ===== Fade edges ===== */
+/* Fade edges */
 .fade {
   position: absolute;
   top: 0;
@@ -30,7 +32,7 @@
   background: linear-gradient(to left, #ecf4f2 0%, transparent 100%);
 }
 
-/* ===== Marquee rows ===== */
+/* Marquee rows */
 .marquee {
   overflow: hidden;
   white-space: nowrap;
@@ -43,50 +45,15 @@
   width: max-content;
 }
 
-/* Right direction */
 .row-right .track {
   animation: marquee-right 25s linear infinite;
 }
 
-/* Left direction */
 .row-left .track {
   animation: marquee-left 25s linear infinite;
 }
 
-/* ===== Brand card ===== */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  padding: 10px;
-  border-radius: 0.75rem;
-  // min-width: 220px;
-}
-
-.icon {
-  width: 36px;
-  height: 36px;
-  background: rgba(84, 192, 139, 0.2);
-  color: #065f46;
-  font-weight: 700;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.title {
-  font-weight: 600;
-}
-
-.subtitle {
-  font-size: 12px;
-  color: #6b7280;
-}
-
-/* ===== Animations ===== */
+/* Animations */
 @keyframes marquee-right {
   from {
     transform: translateX(-50%);

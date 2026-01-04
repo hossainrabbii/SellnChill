@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -7,6 +7,4 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   templateUrl: './preloader.component.html',
 })
-export class PreloaderComponent {
-  @Input() loading: boolean = true; // Controlled by parent
-}
+export class PreloaderComponent {}
