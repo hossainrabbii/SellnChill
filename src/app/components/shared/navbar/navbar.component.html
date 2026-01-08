@@ -1,0 +1,143 @@
+<nav class="py-4 bg-[#005B56] sticky top-0 z-50">
+  <div class="container mx-auto px-6 md:px-0">
+    <!-- TOP LOGIN -->
+    <div class="hidden md:flex justify-end gap-4 mb-3">
+      <button
+        class="bg-white text-green-700 font-semibold px-3 py-2 rounded-lg"
+        (click)="openLogin()"
+      >
+        SNC Login
+      </button>
+      <button
+        class="bg-white text-green-700 font-semibold px-3 py-2 rounded-lg"
+        (click)="openLogin()"
+      >
+        Enterprise Login
+      </button>
+    </div>
+
+    <div class="w-full h-[2px] bg-[#00574E] mb-4 hidden md:flex"></div>
+
+    <div class="flex justify-between items-center nav_bottom">
+      <!-- LOGO (ALWAYS HOME) -->
+      <a
+        routerLink="/"
+        (click)="closeAll()"
+        class="font-bold text-white text-xl flex gap-2 items-center"
+      >
+        <img src="logo.svg" alt="Logo" />
+        Sell&chill
+      </a>
+
+      <!-- MAIN MENU -->
+
+      <div class="hidden md:flex gap-6 text-white px-4 md:px-0">
+        <li class="menu-btn"><a href="/#features">Features</a></li>
+        <li class="menu-btn"><a href="/#integrations">Integrations</a></li>
+        <li class="menu-btn"><a href="/#events">Events</a></li>
+        <li class="menu-btn"><a href="/#business">Business</a></li>
+      </div>
+
+      <ul class="menu-list hidden md:flex gap-6 text-white px-4 md:px-0" [class.active]="menuOpen">
+        <!-- BUSINESS -->
+        <div class="flex flex-col md:hidden gap-6 text-white md:px-0">
+          <li class="menu-btn"><a href="/#features">Features</a></li>
+          <li class="menu-btn"><a href="/#integrations">Integrations</a></li>
+          <li class="menu-btn"><a href="/#events">Events</a></li>
+          <li class="menu-btn"><a href="/#business">Business</a></li>
+        </div>
+        <li class="menu-btn"><a routerLink="/contact">Contact Us</a></li>
+
+        <!-- SOLUTIONS -->
+        <li class="relative">
+          <button type="button" class="menu-btn" (click)="toggleSubMenu('solutions')">
+            Solutions
+          </button>
+
+          <ul class="submenu" *ngIf="openSubMenu === 'solutions'">
+            <li>
+              <a routerLink="/solutions/online-&-retail-order-management" (click)="closeAll()"
+                >Online & Retail Order Management</a
+              >
+            </li>
+            <li>
+              <a routerLink="/solutions/b2b-order-management" (click)="closeAll()"
+                >B2B Order Management</a
+              >
+            </li>
+            <li>
+              <a routerLink="/solutions/manufacturing-system" (click)="closeAll()"
+                >Manufacturing System</a
+              >
+            </li>
+            <li>
+              <a routerLink="/solutions/warehouse-management-system" (click)="closeAll()"
+                >Warehouse Management System</a
+              >
+            </li>
+            <li>
+              <a routerLink="/solutions/crm" (click)="closeAll()">CRM</a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- SUPPORT -->
+        <li class="relative">
+          <button type="button" class="menu-btn" (click)="toggleSubMenu('support')">Support</button>
+
+          <ul class="submenu" *ngIf="openSubMenu === 'support'">
+            <li>
+              <a routerLink="/support/getting-started-guide" (click)="closeAll()"
+                >Getting Started Guide</a
+              >
+            </li>
+            <li>
+              <a routerLink="/support/partners" (click)="closeAll()">Partners</a>
+            </li>
+            <li>
+              <a routerLink="/support/professional-services" (click)="closeAll()"
+                >Professional Services</a
+              >
+            </li>
+            <li>
+              <a routerLink="/support/blogs" (click)="closeAll()">Blogs</a>
+            </li>
+            <li>
+              <a routerLink="/support/events" (click)="closeAll()">Events</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="menu-btn"><a routerLink="/pricing">Pricings</a></li>
+        <div class="w-full h-[2px] bg-[#00574E] mb-4 flex md:hidden"></div>
+
+        <div class="flex md:hidden gap-4 mb-3">
+          <button
+            class="bg-white text-green-700 font-semibold px-3 py-2 rounded-lg"
+            (click)="openLogin()"
+          >
+            SNC Login
+          </button>
+          <button
+            class="bg-white text-green-700 font-semibold px-3 py-2 rounded-lg"
+            (click)="openLogin()"
+          >
+            Enterprise Login
+          </button>
+        </div>
+      </ul>
+      <!-- HAMBURGER (UNCHANGED) -->
+      <div
+        class="hamburger md:hidden flex flex-col gap-1 cursor-pointer z-10"
+        (click)="toggleMenu()"
+        [class.open]="menuOpen"
+      >
+        <span class="bar bg-white w-6 h-0.5 transition-all"></span>
+        <span class="bar bg-white w-6 h-0.5 transition-all"></span>
+        <span class="bar bg-white w-6 h-0.5 transition-all"></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<app-login-modal *ngIf="showLogin" (close)="closeLogin()"></app-login-modal>
